@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  img {
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 5px;
+    padding: 5px;
+    width: 300px;
+  }
+  main {
+    display: grid;
+    grid-template-areas: 
+      'header header header header header' 
+      'article article side side side'
+      'intro intro intro intro intro' 
+      'footer footer footer footer footer';
+      width: 100%;
+  } 
+
+  .side {
+    grid-area: article;
+    background:rgb(197, 192, 228);
+    padding: 4px;
+    font-size: 15px;
+}
+  
+ .Box{
+     display: flex;
+     flex-direction: row;
+     grid-area: intro;
+ }
+  header {
+    grid-area: header;
+    background-color: #4e42fa;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+  }
+  
+  
+  .jobs,
+  .school,
+  .contact {
+    background-color: lightslategray;
+    padding: 10px;
+    height: 300px; 
+  }
+  
+    .expert{
+        grid-area: article;
+        background-color: teal;
+        margin-left: 150px;
+}
+
+.side{
+    grid-area: side;
+}
+
+  .jobs {
+    grid-area: left;
+  }
+  
+  .school {
+    grid-area: middle;
+  }
+  
+  .contact {
+    grid-area: right;
+  }
+  
+  footer {
+    grid-area: footer;
+    background-color: #9b41f0;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 600px) {
+    main  {
+      grid-template-areas: 
+        'header header header header header' 
+        'left left left left left left' 
+        'middle middle middle middle middle ' 
+        'right right right right right right' 
+        'footer footer footer footer footer';
+    }
+  }
